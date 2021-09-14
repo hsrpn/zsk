@@ -30,6 +30,13 @@
     ETYKIETA;
 
   echo $x;
+// nowdoc
+$surname = "Nowak";
+echo <<< 'ETYKIETA'
+  <hr>
+  Anna $surname<br>
+  Poznań<hr>
+ETYKIETA;
 
 
   ?>
