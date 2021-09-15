@@ -1,42 +1,30 @@
 <?php
   echo 'ZSK<br>';
   echo 'ZSK<br>';
-
-  $name "Janusz";
-  echo "<br>"."twoje imię: $name"<br>;
-  //konkatenacja
-  echo 'twoje imię: $name';
-
-  //typy danych
+  $name = 'Janusz';
+  echo 'Twoje imie: $name';
+  echo "<br>"."Twoje imie: $name";
+  // Typy danych
   $prawda = true;
-  $fałsz = false;
-  //integer
+  $falsz = false;
   $całkowita = 10;
   $bin = 0b1011;
   $oct = 011;
-
   $hex = 0x11;
+  echo $całkowita;
+  echo $bin;
+  echo $oct;
   echo $hex;
-  echo gettype($hex); //integer
-  echo gettype($prawda); //boolean
+  echo gettype($hex);
+  echo gettype($prawda);
   $x = 10.5;
-  echo gettype($x); //double
-  //here doc
+  echo gettype($x);
   $surname = "Nowak";
-  //nie nalezy umieszczac spacji w etykiecie
-  $x <<< ETYKIETA
+  $x = <<< ETYKIETA
     <hr>
-    Anna $surname<br>
-    ETYKIETA;
-
-  echo $x;
-// nowdoc
-$surname = "Nowak";
-echo <<< 'ETYKIETA'
-  <hr>
-  Anna $surname<br>
-  Poznań<hr>
+    Anna Nowak<br>
+    Poznań<br>
+    $surname
 ETYKIETA;
-
-
-  ?>
+  echo $x;
+?>
