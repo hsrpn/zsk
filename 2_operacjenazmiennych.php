@@ -1,59 +1,41 @@
 <?php
-  echo PHP_VERSION;
-  echo 2**10; //1024
+  echo PHP_VERSION."<br>";
+  echo 2**10,"<br>";
 
-  $x=1;
-  $y=10;
-  echo $x<=>$y;
+  $x = 1;
+  $y = 10;
+  echo $x<=>$y,"<br>";
 
-  $x=1;
-  $y=1.0;
-  echo gettype($x);
-  echo gettype($y);
-
-  if ($x==$y) {
+  $x = 1;
+  $y = 1.0;
+  echo gettype($x)."<br>";
+  echo gettype($y)."<br>";
+  if($x===$y) {
     echo "Równe";
-
-  } else {
-    echo "Różne";
+  }
+  else {
+    echo "Nierówne";
   }
 
-  //identyczne
-  if ($x===$y) {
-    echo "identyczne";
-
-  } else {
-    echo "Różne";
-  }
   /* preinkrementacja ++$
     postinkrementacja $++
     predekrementacja --$
     postdekrementacja $--
     */
 
-$x=10;
-echo "<br>";
-echo $x; //10
-echo "<br>";
-$x=$x++;
-echo $x; //11
-echo "<br>";
-$y=$x++;
-echo $x; //10
-echo "<br>";
-echo $y;
 
-$x=1;
-echo $x;
-$x=$x++;
-echo $x;
-$x=++$x;
-echo $x;
-$y=++$x;
-echo $x;
-echo $y;
-$y=$x++;
-echo $x;
-echo $y;
+  $x = 1;
+  echo $x; //1
+  $x = $x++;
+  echo $x; //1
+  $x= ++$x;
+  echo $x; //2;
+  $y = ++$x;
+  echo $x; //3
+  echo $y; //3
+  $y = $x++;
+  echo $x; //4
+  echo $y; //3
+  
 
-  ?>
+?>
