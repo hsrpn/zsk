@@ -21,7 +21,9 @@
     //server, user, password, database name
     //przechowywany jest id polaczenia
     $sql = "SELECT * FROM `users`;";
-
+    if (!isset($_GET['error'])) {
+      echo $_GET['error'];
+    }
     $result = $connect->query($sql);
     echo <<< TABLE
     <table>
@@ -46,7 +48,7 @@
       <td>$row[id]</td>
       <td>$row[name]</td>
       <td>$row[surname]</td>
-      <td>$row[birthdate]</td>
+      <td>$row[birthday]</td>
       <td><a href="../skrypty/delete.php?id=$row[id]">Usuń</a></td>
       </tr>
       ROW;
